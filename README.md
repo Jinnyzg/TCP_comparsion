@@ -23,22 +23,25 @@ As a reliable end-to-end protocol, TCP provides a reliable data transfer service
     2. on PC2-PC5, for example `iperf -c pc2 -t 50`.
 
 ### Instructions - experimenal design
-   Basic performance - one flow - one server node & one client nodes
+1. Basic performance - one flow - one server node & one client nodes `iperf -c pc2 -t 50`
     1. no loss no delay in the client node
     2. 0.1% loss in the client node
     3. 5ms delay in the client node
     4. 0.1% loss and 5ms delay in the client node
 
-    Fairness performance - two flows - one server node & two client nodes
+2. Fairness performance - two flows - one server node & two client nodes `iperf -c pc2 -t 50`
     1. no delay and no loss in both clients
     2. 5ms delay in client1 and 10ms delay in client2
     3. 0.1% loss in client1 and 1% loss in client2
     4. 5ms delay and 0.1% loss in client1
 
-(c) Competing traffic - two flows
-Three of the nodes are employed: one as the server and the other two as competing clients. The whole link bandwidth serving all clients is set to be 90Mbps. Client 2 is set to be receiving at 50Mbps. Client 1 is constantly receiving at a certain rate (30Mbps, 40Mbps, and 50Mbps). After 100 seconds, client 2 joins the network and starts to transmit more files. We want to look at if the second client is going to affect the packet delays of client 1.
+3. Competing traffic - two flows - one server node & two client nodes
+    1. set client2 bandwidth to be 50Mbps
+    2. set client1 banndwidth to be 30Mbps, 40Mbps and 50Mbps
+    4. logon to client1 on a new ternimal, start transmission for 300s `iperf -c pc2 -t 300`
+    5. start ping from client1 to the server `ping pc2 | tee out.txt`
+    6. wait 100 seconds, start transmission of client2 for 120s `iperf -c pc2 -t 120`
+4. Competing traffic - three flow
 
-(d) Competing traffic - three flow
-In order to study fairness among three TCP flavors, we observe how clients using different TCP versions share the same link.
 
 
