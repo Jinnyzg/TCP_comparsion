@@ -23,7 +23,7 @@ As a reliable end-to-end protocol, TCP provides a reliable data transfer service
     2. on PC2-PC5, for example `iperf -c pc2 -t 50`.
 
 ### Instructions - experimenal design
-    Basic performance - one flow - one server node & one client nodes
+   Basic performance - one flow - one server node & one client nodes
     1. no loss no delay in the client node
     2. 0.1% loss in the client node
     3. 5ms delay in the client node
