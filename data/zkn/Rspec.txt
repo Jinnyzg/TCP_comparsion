@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<rspec xmlns="http://www.geni.net/resources/rspec/3" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" xmlns:tour="http://www.protogeni.net/resources/rspec/ext/apt-tour/1" xmlns:jacks="http://www.protogeni.net/resources/rspec/ext/jacks/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geni.net/resources/rspec/3    http://www.geni.net/resources/rspec/3/manifest.xsd" type="manifest" expires="2021-12-23T23:59:59Z">
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="PC1" component_manager_id="urn:publicid:IDN+instageni.maxgigapop.net+authority+cm" component_id="urn:publicid:IDN+instageni.maxgigapop.net+node+pc4" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67176" exclusive="false">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <login authentication="ssh-keys" hostname="pc4.instageni.maxgigapop.net" port="25010" username="katzhang"/>
+      <login authentication="ssh-keys" hostname="pc4.instageni.maxgigapop.net" port="25010" username="matta"/>
+      <login authentication="ssh-keys" hostname="pc4.instageni.maxgigapop.net" port="25010" username="zhangzs"/>
+      <login authentication="ssh-keys" hostname="pc4.instageni.maxgigapop.net" port="25010" username="fahadf"/>
+      <emulab:console server="pc4.instageni.maxgigapop.net"/>
+      <emulab:imageable available="true"/>
+    </services>
+    <interface client_id="interface-9" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc4:eth2" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67192" mac_address="0208ad508479">
+      <ip address="10.10.5.1" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <emulab:vnode name="pcvm4-8" hardware_type="pcvm" disk_image="emulab-ops/UBUNTU18-64-STD:0"/>
+    <host name="PC1.MIni-Project.ch-geni-net.instageni.maxgigapop.net"/>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="delay" component_manager_id="urn:publicid:IDN+instageni.maxgigapop.net+authority+cm" component_id="urn:publicid:IDN+instageni.maxgigapop.net+node+pc2" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67174" exclusive="false">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <login authentication="ssh-keys" hostname="pc2.instageni.maxgigapop.net" port="25010" username="katzhang"/>
+      <login authentication="ssh-keys" hostname="pc2.instageni.maxgigapop.net" port="25010" username="matta"/>
+      <login authentication="ssh-keys" hostname="pc2.instageni.maxgigapop.net" port="25010" username="zhangzs"/>
+      <login authentication="ssh-keys" hostname="pc2.instageni.maxgigapop.net" port="25010" username="fahadf"/>
+      <emulab:console server="pc2.instageni.maxgigapop.net"/>
+      <emulab:imageable available="true"/>
+    </services>
+    <interface client_id="interface-1" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc2:eth2" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67180" mac_address="02eda99ef334">
+      <ip address="10.10.1.1" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <interface client_id="interface-2" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc2:eth3" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67183" mac_address="0299c552c1ef">
+      <ip address="10.10.2.1" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <interface client_id="interface-6" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc2:eth3" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67187" mac_address="02bfc42b904f">
+      <ip address="10.10.3.2" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <interface client_id="interface-8" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc2:eth2" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67190" mac_address="0256f502abe1">
+      <ip address="10.10.4.2" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <interface client_id="interface-10" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc2:eth2" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67193" mac_address="027f8adeb180">
+      <ip address="10.10.5.2" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <emulab:vnode name="pcvm2-17" hardware_type="pcvm" disk_image="emulab-ops/UBUNTU18-64-STD:0"/>
+    <host name="delay.MIni-Project.ch-geni-net.instageni.maxgigapop.net"/>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="PC2" component_manager_id="urn:publicid:IDN+instageni.maxgigapop.net+authority+cm" component_id="urn:publicid:IDN+instageni.maxgigapop.net+node+pc5" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67173" exclusive="false">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <login authentication="ssh-keys" hostname="pc5.instageni.maxgigapop.net" port="25010" username="katzhang"/>
+      <login authentication="ssh-keys" hostname="pc5.instageni.maxgigapop.net" port="25010" username="matta"/>
+      <login authentication="ssh-keys" hostname="pc5.instageni.maxgigapop.net" port="25010" username="zhangzs"/>
+      <login authentication="ssh-keys" hostname="pc5.instageni.maxgigapop.net" port="25010" username="fahadf"/>
+      <emulab:console server="pc5.instageni.maxgigapop.net"/>
+      <emulab:imageable available="true"/>
+    </services>
+    <interface client_id="interface-3" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc5:eth2" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67184" mac_address="02d44ba2ac0b">
+      <ip address="10.10.2.2" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <emulab:vnode name="pcvm5-10" hardware_type="pcvm" disk_image="emulab-ops/UBUNTU18-64-STD:0"/>
+    <host name="PC2.MIni-Project.ch-geni-net.instageni.maxgigapop.net"/>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node-0" component_manager_id="urn:publicid:IDN+instageni.maxgigapop.net+authority+cm" component_id="urn:publicid:IDN+instageni.maxgigapop.net+node+pc1" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67177" exclusive="false">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <login authentication="ssh-keys" hostname="pc1.instageni.maxgigapop.net" port="25010" username="katzhang"/>
+      <login authentication="ssh-keys" hostname="pc1.instageni.maxgigapop.net" port="25010" username="matta"/>
+      <login authentication="ssh-keys" hostname="pc1.instageni.maxgigapop.net" port="25010" username="zhangzs"/>
+      <login authentication="ssh-keys" hostname="pc1.instageni.maxgigapop.net" port="25010" username="fahadf"/>
+      <emulab:console server="pc1.instageni.maxgigapop.net"/>
+      <emulab:imageable available="true"/>
+    </services>
+    <interface client_id="interface-4" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc1:eth2" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67181" mac_address="02b4c77c419f">
+      <ip address="10.10.1.2" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <interface client_id="interface-7" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc1:eth2" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67189" mac_address="022fd5c74534">
+      <ip address="10.10.4.1" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <emulab:vnode name="pcvm1-18" hardware_type="pcvm" disk_image="emulab-ops/UBUNTU18-64-STD:0"/>
+    <host name="node-0.MIni-Project.ch-geni-net.instageni.maxgigapop.net"/>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node-1" component_manager_id="urn:publicid:IDN+instageni.maxgigapop.net+authority+cm" component_id="urn:publicid:IDN+instageni.maxgigapop.net+node+pc3" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67175" exclusive="false">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <login authentication="ssh-keys" hostname="pc3.instageni.maxgigapop.net" port="25010" username="katzhang"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.maxgigapop.net" port="25010" username="matta"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.maxgigapop.net" port="25010" username="zhangzs"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.maxgigapop.net" port="25010" username="fahadf"/>
+      <emulab:console server="pc3.instageni.maxgigapop.net"/>
+      <emulab:imageable available="true"/>
+    </services>
+    <interface client_id="interface-5" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc3:eth1" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67186" mac_address="024b4f067f9d">
+      <ip address="10.10.3.1" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <emulab:vnode name="pcvm3-7" hardware_type="pcvm" disk_image="emulab-ops/UBUNTU18-64-STD:0"/>
+    <host name="node-1.MIni-Project.ch-geni-net.instageni.maxgigapop.net"/>
+  </node>
+  <link client_id="link-0" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67179" vlantag="286">
+    <interface_ref client_id="interface-1" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc2:eth2" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67180"/>
+    <interface_ref client_id="interface-4" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc1:eth2" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67181"/>
+    <component_manager name="urn:publicid:IDN+instageni.maxgigapop.net+authority+cm"/>
+    <property source_id="interface-1" dest_id="interface-4" capacity="300000"/>
+  </link>
+  <link client_id="link-1" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67182" vlantag="283">
+    <interface_ref client_id="interface-2" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc2:eth3" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67183"/>
+    <interface_ref client_id="interface-3" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc5:eth2" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67184"/>
+    <component_manager name="urn:publicid:IDN+instageni.maxgigapop.net+authority+cm"/>
+    <property source_id="interface-2" dest_id="interface-3" capacity="300000"/>
+    <property source_id="interface-3" dest_id="interface-2" capacity="300000"/>
+  </link>
+  <link client_id="link-2" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67185" vlantag="285">
+    <interface_ref client_id="interface-5" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc3:eth1" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67186"/>
+    <interface_ref client_id="interface-6" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc2:eth3" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67187"/>
+    <component_manager name="urn:publicid:IDN+instageni.maxgigapop.net+authority+cm"/>
+  </link>
+  <link client_id="link-3" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67188" vlantag="287">
+    <interface_ref client_id="interface-7" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc1:eth2" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67189"/>
+    <interface_ref client_id="interface-8" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc2:eth2" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67190"/>
+    <component_manager name="urn:publicid:IDN+instageni.maxgigapop.net+authority+cm"/>
+  </link>
+  <link client_id="link-4" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67191" vlantag="290">
+    <interface_ref client_id="interface-9" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc4:eth2" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67192"/>
+    <interface_ref client_id="interface-10" component_id="urn:publicid:IDN+instageni.maxgigapop.net+interface+pc2:eth2" sliver_id="urn:publicid:IDN+instageni.maxgigapop.net+sliver+67193"/>
+    <component_manager name="urn:publicid:IDN+instageni.maxgigapop.net+authority+cm"/>
+  </link>
+  <rs:site_info xmlns:rs="http://www.protogeni.net/resources/rspec/ext/site-info/1">
+    <rs:location country="" latitude="38.970941" longitude="-76.921971"/>
+  </rs:site_info>
+</rspec>
