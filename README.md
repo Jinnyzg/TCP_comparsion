@@ -12,12 +12,12 @@ As a reliable end-to-end protocol, TCP provides a reliable data transfer service
 1. Set up Resources in Geni with the RSpec provided(txt)
 2. log in to all hosts and install iperf using the command `sudo apt-get install iperf`
 3. set network condition in delay server using tc
-    1. set network delay, bandwidth bound and loss: `sudo tc qdisc add dev eth1 root netem rate 90mbit delay 5ms loss 0.01%`
+    1. set network delay, bandwidth bound and loss: `sudo tc qdisc add dev eth1 root netem rate 90mbit delay 5ms loss 0.01%`, depending on the design
     2. delete previous set: `sudo tc qdisc del dev eth1 root netem'
     3. view link condition: `sudo tc qdisc show`
 5. set TCP version in hosts using `sysctl` 
     1. set sack: `sudo sysctl net.ipv4.tcp_sack=1`
-    2. set tcp version: `sudo sysctl net.ipv4.tcp_congestion_control=reno`
+    2. set tcp version: `sudo sysctl net.ipv4.tcp_congestion_control=reno`, depending on the design
 6. measure throughput: 
     1. on PC1: `iperf -s`
     2. on PC2-PC5: `iperf -c pc2 -t 50`
