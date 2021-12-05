@@ -38,8 +38,8 @@ As a reliable end-to-end protocol, TCP provides a reliable data transfer service
 3. Competing traffic - two flows - one server node & two client nodes
     1. set client2 bandwidth to be 50Mbps
     2. set client1 banndwidth to be 30Mbps, 40Mbps and 50Mbps
-    4. logon to client1 on a new ternimal, start transmission for 300s `iperf -c pc2 -t 300`
-    5. start ping from client1 to the server `ping pc2 | tee out.txt`
+    4. start client1 transmission for 300s `iperf -c pc2 -t 300`
+    5. logon to client1 on a new terminal and start ping from client1 to the server `ping pc2 | tee out.txt`
     6. wait 100 seconds, start transmission of client2 for 120s `iperf -c pc2 -t 120`
 4. Competing traffic - three flow
 
