@@ -8,7 +8,7 @@ As a reliable end-to-end protocol, TCP provides a reliable data transfer service
 * use iperf to measure the achievable bandwidth on IP networks
 * use Linux Traffic Control (tc) to manage and manipulate thetransmission of packets
 
-### Intructions
+### Command Line Usage
 1. Set up Resources in Geni with the RSpec provided (Rsepc.txt)
 2. log in to all hosts and install iperf using the command `sudo apt-get install iperf`
 3. set network condition in delay server using tc
@@ -41,7 +41,12 @@ As a reliable end-to-end protocol, TCP provides a reliable data transfer service
     4. start client1 transmission for 300s `iperf -c pc2 -t 300`
     5. logon to client1 on a new terminal and start ping from client1 to the server `ping pc2 | tee out.txt`
     6. wait 100 seconds, start transmission of client2 for 120s `iperf -c pc2 -t 120`
-4. Competing traffic - three flow
+ 
+4. Competing traffic - three flow - one server node & three client nodes `iperf -c pc2 -t 50`
+    1. one client use Vegas, the other two use Reno
+    2. one client use Cubic, the other two use Reno
+    3. one use Cubic, one use Vegas, one use Reno
+ 
 
 
 
